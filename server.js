@@ -11,9 +11,6 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-const PORT = 3000;
-
-
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
 });
