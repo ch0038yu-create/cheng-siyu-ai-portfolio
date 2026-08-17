@@ -10455,3 +10455,9 @@ footer p {
     }
 
 }
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+}
