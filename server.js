@@ -1,8 +1,15 @@
 const express = require("express");
+const path = require("path");
 const OpenAI = require("openai");
 const fs = require("fs");
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
 const PORT = 3000;
 
@@ -59,9 +66,8 @@ app.post("/api/chat", async function (req, res) {
 
 });
 
+const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, function () {
-
-    console.log("Server is running on http://localhost:3000");
-
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on port ${PORT}`);
 });
