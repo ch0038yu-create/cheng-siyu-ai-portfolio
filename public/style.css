@@ -9913,3 +9913,545 @@ footer p {
     }
 
 }
+
+/* =========================================================
+   ALL EXPERIENCE MODALS · SMALLER TYPOGRAPHY
+   四个实习弹窗统一缩小
+========================================================= */
+
+/* 弹窗顶部公司名 */
+.experience-modal-title,
+#experience-modal-title {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+}
+
+/* 弹窗正文整体 */
+.experience-modal-body {
+    font-size: 10px !important;
+    line-height: 1.68 !important;
+}
+
+/* 开头标签 */
+.experience-case-label {
+    font-size: 9px !important;
+}
+
+/* 开头主标题 */
+.experience-overview-title {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+}
+
+/* 开头说明 */
+.experience-case-intro p {
+    font-size: 10px !important;
+    line-height: 1.7 !important;
+}
+
+/* 左侧 01 / 02 / 03 / 04 */
+.experience-case-number {
+    font-size: 34px !important;
+    line-height: 1 !important;
+}
+
+/* 英文分类 */
+.experience-case-category {
+    font-size: 8px !important;
+    letter-spacing: 0.9px !important;
+}
+
+/* 每个 Case 中文标题 */
+.experience-case-content h4 {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+}
+
+/* 每个 Case 正文 */
+.experience-case-content > p {
+    font-size: 10px !important;
+    line-height: 1.7 !important;
+}
+
+/* 流程节点 */
+.case-process span,
+.nio-process-flow span,
+.metro-data-flow span,
+.metro-inventory-flow span {
+    font-size: 8px !important;
+}
+
+/* Result 单条 */
+.experience-result {
+    font-size: 9px !important;
+    line-height: 1.5 !important;
+}
+
+/* Result 数字 */
+.experience-result-grid strong,
+.experience-outcomes strong {
+    font-size: 14px !important;
+}
+
+/* Result 说明 */
+.experience-result-grid span,
+.experience-outcomes span {
+    font-size: 8px !important;
+}
+
+/* 各类小卡片正文 */
+.experience-example-card p,
+.experience-insight p,
+.nio-improve p,
+.nio-rule-card p,
+.nio-ai-flow p,
+.nio-ai-example p,
+.metro-future p,
+.metro-rule-list p,
+.metro-exception-example p,
+.metro-inventory-card p,
+.metro-supplier-scorecard p,
+.eqlz-production-logic p,
+.eqlz-order-card p,
+.eqlz-material-section p,
+.eqlz-readiness-card p {
+    font-size: 9px !important;
+    line-height: 1.65 !important;
+}
+
+/* 小卡片标题 */
+.experience-example-card h5,
+.nio-improve h5,
+.metro-future h5,
+.metro-inventory-card h5,
+.eqlz-production-logic h5 {
+    font-size: 12px !important;
+}
+
+/* 小标签 */
+.example-label,
+.nio-example-label,
+.metro-small-label,
+.eqlz-small-label {
+    font-size: 8px !important;
+}
+
+/* Learning */
+.experience-learning p {
+    font-size: 9px !important;
+    line-height: 1.7 !important;
+}
+
+/* =========================================================
+   EXPERIENCE MODALS · ULTRA COMPACT
+   四个实习弹窗统一：更小字体 + 更紧密间距
+========================================================= */
+
+/* 整个弹窗正文区域 */
+.experience-modal-body {
+    padding: 20px 26px 26px !important;
+    font-size: 9px !important;
+    line-height: 1.55 !important;
+}
+
+
+/* 顶部 header */
+.experience-modal-header {
+    padding: 14px 24px !important;
+}
+
+.experience-modal-title,
+#experience-modal-title {
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+}
+
+
+/* 开头总览 */
+.experience-case-intro {
+    margin-bottom: 18px !important;
+}
+
+.experience-case-label {
+    margin: 0 0 5px !important;
+    font-size: 8px !important;
+}
+
+.experience-overview-title {
+    margin: 0 0 7px !important;
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+}
+
+.experience-case-intro p {
+    margin: 0 !important;
+    font-size: 9px !important;
+    line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   每个 CASE 更紧
+========================================================= */
+
+.experience-case-block {
+    gap: 16px !important;
+
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+
+    margin: 0 !important;
+}
+
+
+/* 左侧大编号 */
+.experience-case-number {
+    font-size: 28px !important;
+    line-height: 1 !important;
+}
+
+
+/* Case 分类 */
+.experience-case-category {
+    margin: 0 0 5px !important;
+
+    font-size: 7px !important;
+    line-height: 1.3 !important;
+
+    letter-spacing: 0.8px !important;
+}
+
+
+/* Case 中文标题 */
+.experience-case-content h4 {
+    margin: 0 0 7px !important;
+
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+}
+
+
+/* Case 普通正文 */
+.experience-case-content > p {
+    margin: 0 0 7px !important;
+
+    font-size: 9px !important;
+    line-height: 1.58 !important;
+}
+
+
+/* 连续段落不要隔太远 */
+.experience-case-content > p + p {
+    margin-top: 5px !important;
+}
+
+
+/* =========================================================
+   流程
+========================================================= */
+
+.case-process,
+.nio-process-flow,
+.metro-data-flow,
+.metro-inventory-flow {
+    gap: 5px !important;
+
+    margin-top: 11px !important;
+    margin-bottom: 11px !important;
+}
+
+
+.case-process span,
+.nio-process-flow span,
+.metro-data-flow span,
+.metro-inventory-flow span {
+    padding: 5px 8px !important;
+
+    font-size: 7px !important;
+    line-height: 1.3 !important;
+
+    border-radius: 7px !important;
+}
+
+
+.case-process b,
+.nio-process-flow b,
+.metro-data-flow b,
+.metro-inventory-flow b {
+    font-size: 8px !important;
+}
+
+
+/* =========================================================
+   单条 RESULT
+========================================================= */
+
+.experience-result {
+    margin-top: 10px !important;
+
+    padding: 9px 12px !important;
+
+    font-size: 8px !important;
+    line-height: 1.4 !important;
+
+    border-radius: 8px !important;
+}
+
+
+/* =========================================================
+   多指标 RESULT
+========================================================= */
+
+.experience-result-grid {
+    gap: 7px !important;
+
+    margin-top: 11px !important;
+    margin-bottom: 0 !important;
+}
+
+
+.experience-result-grid > div {
+    min-height: 0 !important;
+
+    padding: 9px 11px !important;
+
+    border-radius: 8px !important;
+}
+
+
+.experience-result-grid strong {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+}
+
+
+.experience-result-grid span {
+    margin-top: 2px !important;
+
+    font-size: 7px !important;
+    line-height: 1.3 !important;
+}
+
+
+/* =========================================================
+   得物的小卡片
+========================================================= */
+
+.experience-example-grid {
+    gap: 8px !important;
+
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+
+.experience-example-card {
+    padding: 11px 12px !important;
+}
+
+
+.experience-example-card h5 {
+    margin: 4px 0 5px !important;
+
+    font-size: 11px !important;
+}
+
+
+.experience-example-card p {
+    margin: 0 0 5px !important;
+
+    font-size: 8px !important;
+    line-height: 1.5 !important;
+}
+
+
+.experience-example-card strong {
+    font-size: 8px !important;
+    line-height: 1.4 !important;
+}
+
+
+/* =========================================================
+   蔚来 / 麦德龙 / EQLZ 内部扩展块
+========================================================= */
+
+.nio-improve,
+.nio-alert-example,
+.nio-ai-example,
+.metro-future,
+.metro-rule-example,
+.metro-exception-example,
+.metro-supplier-scorecard,
+.eqlz-production-logic,
+.eqlz-material-section,
+.eqlz-readiness {
+    margin-top: 11px !important;
+
+    padding: 12px !important;
+
+    border-radius: 9px !important;
+}
+
+
+/* 内部标题 */
+.nio-improve strong,
+.metro-future strong,
+.eqlz-production-logic strong {
+    font-size: 10px !important;
+}
+
+
+/* 内部正文 */
+.nio-improve p,
+.nio-rule-card p,
+.nio-alert-example p,
+.nio-ai-flow p,
+.nio-ai-example p,
+.metro-future p,
+.metro-rule-list p,
+.metro-exception-example p,
+.metro-inventory-card p,
+.metro-supplier-scorecard p,
+.eqlz-production-logic p,
+.eqlz-order-card p,
+.eqlz-material-section p,
+.eqlz-readiness-card p {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+
+    font-size: 8px !important;
+    line-height: 1.5 !important;
+}
+
+
+/* 小标题 */
+.example-label,
+.nio-example-label,
+.metro-small-label,
+.eqlz-small-label {
+    font-size: 7px !important;
+}
+
+
+/* =========================================================
+   各类内部 GRID 也缩紧
+========================================================= */
+
+.nio-rule-grid,
+.nio-ai-flow,
+.metro-rule-list,
+.metro-inventory-grid,
+.eqlz-order-grid,
+.eqlz-material-grid,
+.eqlz-readiness-grid {
+    gap: 7px !important;
+
+    margin-top: 9px !important;
+}
+
+
+.nio-rule-card,
+.nio-ai-flow > div,
+.metro-inventory-card,
+.eqlz-order-card,
+.eqlz-readiness-card {
+    padding: 9px 10px !important;
+
+    border-radius: 8px !important;
+}
+
+
+/* =========================================================
+   FINAL IMPACT
+========================================================= */
+
+.experience-impact {
+    margin-top: 12px !important;
+
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+
+.experience-impact h4 {
+    margin: 4px 0 10px !important;
+
+    font-size: 13px !important;
+}
+
+
+.experience-outcomes {
+    gap: 7px !important;
+}
+
+
+.experience-outcomes > div {
+    padding: 9px !important;
+}
+
+
+.experience-outcomes strong {
+    font-size: 12px !important;
+}
+
+
+.experience-outcomes span {
+    font-size: 7px !important;
+}
+
+
+/* =========================================================
+   LEARNING
+========================================================= */
+
+.experience-learning {
+    margin-top: 14px !important;
+    padding-top: 14px !important;
+}
+
+
+.experience-learning p {
+    margin: 5px 0 !important;
+
+    font-size: 8px !important;
+    line-height: 1.55 !important;
+}
+
+
+/* 关闭按钮再小一点 */
+#experience-modal-close {
+    width: 30px !important;
+    height: 30px !important;
+
+    font-size: 15px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .experience-modal-body {
+        padding: 16px 14px 22px !important;
+    }
+
+    .experience-modal-title,
+    #experience-modal-title {
+        font-size: 15px !important;
+    }
+
+    .experience-overview-title {
+        font-size: 13px !important;
+    }
+
+    .experience-case-content h4 {
+        font-size: 12px !important;
+    }
+
+    .experience-case-number {
+        font-size: 24px !important;
+    }
+
+}
