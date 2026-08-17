@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>食光 AI · 个人食材助手</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAV
+========================= -->
+
+<nav class="app-nav">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            食
+        </div>
+
+        <div>
+
+            <strong>
+                食光 AI
+            </strong>
+
+            <span>
+                Pantry Copilot
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="/"
+        class="back-link"
+    >
+        ← 返回个人主页
+    </a>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="app-hero">
+
+    <p class="eyebrow">
+        AI × LIFE × INVENTORY
+    </p>
+
+    <h1>
+        先吃掉快过期的，
+        <br>
+        再决定今晚吃什么。
+    </h1>
+
+    <p class="hero-description">
+        一个把库存管理思维应用到日常生活的 AI 食材助手。
+        记录家中食材、识别临期风险，并根据现有库存生成饮食建议。
+    </p>
+
+</header>
+
+
+
+<main class="app-container">
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================= -->
+
+    <section class="dashboard">
+
+        <div class="dashboard-card">
+
+            <span>
+                当前食材
+            </span>
+
+            <strong id="total-items">
+                0
+            </strong>
+
+            <p>
+                种食材
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-card warning">
+
+            <span>
+                即将过期
+            </span>
+
+            <strong id="expiring-items">
+                0
+            </strong>
+
+            <p>
+                3 天内
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>
+                已过期
+            </span>
+
+            <strong id="expired-items">
+                0
+            </strong>
+
+            <p>
+                建议检查
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>
+                今日建议
+            </span>
+
+            <strong id="suggestion-count">
+                0
+            </strong>
+
+            <p>
+                道菜
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ADD ITEM
+    ========================= -->
+
+    <section class="panel">
+
+        <div class="panel-heading">
+
+            <div>
+
+                <p class="section-label">
+                    01 · 建立库存
+                </p>
+
+                <h2>
+                    添加食材
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <form id="ingredient-form">
+
+            <div class="form-grid">
+
+
+                <div class="form-field">
+
+                    <label for="ingredient-name">
+                        食材名称
+                    </label>
+
+                    <input
+                        id="ingredient-name"
+                        type="text"
+                        placeholder="例如：鸡蛋"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="ingredient-quantity">
+                        数量
+                    </label>
+
+                    <input
+                        id="ingredient-quantity"
+                        type="number"
+                        min="1"
+                        value="1"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="ingredient-unit">
+                        单位
+                    </label>
+
+                    <select id="ingredient-unit">
+
+                        <option value="个">
+                            个
+                        </option>
+
+                        <option value="盒">
+                            盒
+                        </option>
+
+                        <option value="袋">
+                            袋
+                        </option>
+
+                        <option value="瓶">
+                            瓶
+                        </option>
+
+                        <option value="份">
+                            份
+                        </option>
+
+                        <option value="克">
+                            克
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="ingredient-category">
+                        分类
+                    </label>
+
+                    <select id="ingredient-category">
+
+                        <option value="蔬菜">
+                            蔬菜
+                        </option>
+
+                        <option value="肉类">
+                            肉类
+                        </option>
+
+                        <option value="蛋奶">
+                            蛋奶
+                        </option>
+
+                        <option value="水果">
+                            水果
+                        </option>
+
+                        <option value="主食">
+                            主食
+                        </option>
+
+                        <option value="其他">
+                            其他
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="ingredient-expiry">
+                        到期日期
+                    </label>
+
+                    <input
+                        id="ingredient-expiry"
+                        type="date"
+                        required
+                    >
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                type="submit"
+            >
+                + 添加到我的冰箱
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =========================
+         INVENTORY
+    ========================= -->
+
+    <section class="panel">
+
+        <div class="panel-heading">
+
+            <div>
+
+                <p class="section-label">
+                    02 · 库存状态
+                </p>
+
+                <h2>
+                    我的冰箱
+                </h2>
+
+            </div>
+
+
+            <div class="inventory-filter">
+
+                <button
+                    class="filter-button active"
+                    data-filter="all"
+                >
+                    全部
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-filter="expiring"
+                >
+                    临期
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-filter="expired"
+                >
+                    已过期
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="inventory-list"
+            id="inventory-list"
+        >
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         AI RECOMMENDATION
+    ========================= -->
+
+    <section class="ai-panel">
+
+        <div class="ai-panel-header">
+
+            <div>
+
+                <p class="section-label">
+                    03 · 智能饮食建议
+                </p>
+
+                <h2>
+                    今天吃什么？
+                </h2>
+
+                <p>
+                    系统会优先考虑即将过期的食材，
+                    再结合当前库存生成组合建议。
+                </p>
+
+            </div>
+
+
+            <button
+                id="generate-button"
+                class="ai-button"
+            >
+                ✦ 生成今日建议
+            </button>
+
+        </div>
+
+
+        <div
+            id="ai-results"
+            class="ai-results"
+        >
+
+            <div class="empty-state">
+
+                <span>
+                    ✦
+                </span>
+
+                <p>
+                    添加一些食材后，
+                    点击“生成今日建议”。
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SHOPPING
+    ========================= -->
+
+    <section class="panel">
+
+        <div class="panel-heading">
+
+            <div>
+
+                <p class="section-label">
+                    04 · 补货建议
+                </p>
+
+                <h2>
+                    购物清单
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="shopping-list"
+            class="shopping-list"
+        >
+
+            <p class="shopping-empty">
+                暂无需要购买的食材。
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        食光 AI · Vibe Coding Project
+    </p>
+
+    <p>
+        Designed & Built by 程思雨
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
